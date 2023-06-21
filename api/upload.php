@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
     echo 'img uploaded';
   }
   print_r($img);
+  echo __DIR__;
 }
 ?>
 <!DOCTYPE html>
