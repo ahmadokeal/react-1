@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $img = $_FILES['img'];
-  chmod($img['tmp_name'], 0777)
+  chmod($img['tmp_name'], 0755)
   if (move_uploaded_file($img['tmp_name'], __DIR__ . "/" . rand(0, 1000000) . '.png')) {
     echo 'img uploaded';
   }
