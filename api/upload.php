@@ -4,8 +4,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
   if (move_uploaded_file($img['tmp_name'], __DIR__ . "/" . rand(0, 1000000) . '.png')) {
     echo 'img uploaded';
   }
-  print_r(_FILES);
-  echo __DIR__;
 }
 ?>
 <!DOCTYPE html>
@@ -19,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
 </head>
 
 <body>
+  <?php echo __DIR__;?>
+  <?php print_r(_FILES); ?>
   <form action="<?= $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="post">
     <input type="file" name="img">
     <button>sub</button>
