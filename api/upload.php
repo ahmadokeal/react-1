@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
 
 <body>
   <?php echo __DIR__;?>
-  <?php print_r(_FILES); ?>
+  <?php print_r($_FILES); ?>
   <form action="<?= $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="post">
     <input type="file" name="img">
     <button>sub</button>
