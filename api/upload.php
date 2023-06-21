@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'post') {
 <body>
   <form action="<?= $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data" method="post">
     <input type="file" name="img">
+    <button>sub</button>
   </form>
 </body>
 
