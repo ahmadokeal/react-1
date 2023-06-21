@@ -1,9 +1,10 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'post') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $img = $_FILES['img'];
   if (move_uploaded_file($img['tmp_name'], __DIR__ . "/" . rand(0, 1000000) . '.png')) {
     echo 'img uploaded';
   }
+  echo 'hello';
 }
 ?>
 <!DOCTYPE html>
